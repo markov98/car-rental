@@ -2,7 +2,7 @@
 export default function App() {
 
   return (
-    <div id="main"> <a href="#"><img src="images/logo.gif" alt="" border="0" className="logo" /></a>
+    <div id="main"> <a href="#"><img src="images/logo.png" alt="" border="0" className="logo" /></a>
       <ul className="topcar">
         <li><a href="#"><img src="images/img01.jpg" alt="" width="79" height="92" border="0" /></a></li>
         <li><a href="#"><img src="images/img02.jpg" alt="" border="0" /></a></li>
