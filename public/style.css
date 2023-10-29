@@ -17,15 +17,15 @@ form, label, input {
 	ul{list-style:none;}
 
 /*-----------------------*/
-div#main{width:778px; margin:0 auto 0 auto;}
-div#main img.logo{float:left; margin:44px 0 0 19px;}
-div#main ul.topcar{ width:315px; margin:5px 0 0 0; float:right; height:92px;}
-div#main ul.topcar li{ float:left; line-height:0 ; font-size:0;}
-div#main ul.topnav{ width:454px; float:left; height:17px; display:block; padding:5px 0 0 9px; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; color:#FFFFFF; background:#697779; margin:9px 0 0 0;}
+div#main{width:90%; margin:0 auto 0 auto;}
+div#main img.logo{float:left; width: 30%; height: 50px; margin:24px 34% 9px 1%;}
+div#main ul.topcar{ width:25%; float:right; height:92px;}
+div#main ul.topcar li{ float:right; line-height:0 ; font-size:0;}
+div#main ul.topnav{ width:75%; float:left; height:17px; display:block; padding:5px 0 0 0; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; color:#FFFFFF; background:#697779; margin:9px 0 0 0;}
 div#main ul.topnav li{ float:left;}
 div#main ul.topnav li a{ margin:0 10px 0 10px; text-decoration:none; color:#FFFFFF; background:inherit;}
 div#main ul.topnav li a:hover{ text-decoration:underline;}
-div#main h2.gallary{ background:#000; width:299px; height:17px; padding:5px 0 0 16px; float:right; font:bold 11px/14px Verdana, Arial, Helvetica, sans-serif; color:#CCCCCC;}
+div#main h2.gallary{ background:#000; width:25%; height:17px; padding:5px 0 0 0; float:right; font:bold 11px/14px Verdana, Arial, Helvetica, sans-serif; color:#CCCCCC;}
 div#main div#header{background:url(images/header.jpg) no-repeat 0 0 ; width:778px; height:295px; display:block; clear:both;}
 /*--------body-------------*/
 div#main div#body{ width:778px; background:#EEEEEE; padding:0 0 13px 0;}
