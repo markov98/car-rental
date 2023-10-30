@@ -7,9 +7,7 @@ export default function App() {
       <Header />
       <div id="body">
         <div className="left"> <img src="images/welcome.gif" alt="" /><br />
-          <p>This is <strong>Car Online</strong> , a free, fully standards-compliant CSS template designed by Free CSS Templates. <br />
-            This free template is released under a Creative Commons Attributions 2.5 license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :) </p>
-          <p><a href="#">Fusce feugiat malesuada odio morbi nunc odio gravida at</a>... tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci.Donec sit amet eros.</p>
+          <p>This is <strong>Markov Rentals</strong>, a Car Rental website I have created using React.</p>
         </div>
         <form action="#" method="get" className="search">
           <img src="images/carbooking.gif" alt="" className="head" /><br />
