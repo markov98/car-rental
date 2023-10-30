@@ -3,7 +3,7 @@ export default function App() {
 
   return (
     <div id="main">
-      <div>
+      <div className="top">
         <a href="#"><img src="images/logo.png" alt="" border="0" className="logo" /></a>
         <ul className="topcar">
           <li><a href="#"><img src="images/img01.jpg" alt="" width="79" height="92" border="0" /></a></li>
@@ -12,7 +12,7 @@ export default function App() {
           <li><a href="#"><img src="images/img04.jpg" alt="" border="0" /></a></li>
         </ul>
       </div>
-      <div>
+      <div className="nav">
         <ul className="topnav">
           <li><a href="#">Home</a> | </li>
           <li><a href="#">Customer Care</a> |</li>
@@ -22,7 +22,7 @@ export default function App() {
         </ul>
         <h2 className="gallary">Choose a car from Gallery</h2>
       </div>
-      <div id="header"> </div>
+      <div id="header"><img src='images/car.png' /></div>
       <div id="body">
         <div className="left"> <img src="images/welcome.gif" alt="" /><br />
           <p>This is <strong>Car Online</strong> , a free, fully standards-compliant CSS template designed by Free CSS Templates. <br />

@@ -18,15 +18,18 @@ form, label, input {
 
 /*-----------------------*/
 div#main{width:90%; margin:0 auto 0 auto;}
-div#main img.logo{float:left; width: 30%; height: 50px; margin:24px 34% 9px 1%;}
-div#main ul.topcar{ width:25%; float:right; height:92px;}
-div#main ul.topcar li{ float:right; line-height:0 ; font-size:0;}
-div#main ul.topnav{ width:75%; float:left; height:17px; display:block; padding:5px 0 0 0; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; color:#FFFFFF; background:#697779; margin:9px 0 0 0;}
-div#main ul.topnav li{ float:left;}
-div#main ul.topnav li a{ margin:0 10px 0 10px; text-decoration:none; color:#FFFFFF; background:inherit;}
-div#main ul.topnav li a:hover{ text-decoration:underline;}
-div#main h2.gallary{ background:#000; width:25%; height:17px; padding:5px 0 0 0; float:right; font:bold 11px/14px Verdana, Arial, Helvetica, sans-serif; color:#CCCCCC;}
-div#main div#header{background:url(images/header.jpg) no-repeat 0 0 ; width:778px; height:295px; display:block; clear:both;}
+div#main div.top{height: 92px;}
+div#main div.top img.logo{float:left; width: 30%; height: 50px; margin:24px 34% 9px 1%;}
+div#main div.top ul.topcar{ width:25%; float:right; height:92px;}
+div#main div.top ul.topcar li{ float:right; line-height:0 ; font-size:0;}
+div#main div.nav{height: 17px;}
+div#main div.nav ul.topnav{ width:75%; float:left; height:17px; display:block; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; color:#FFFFFF; background:#697779;}
+div#main div.nav ul.topnav li{ float:left;}
+div#main div.nav ul.topnav li a{ margin:0 10px 0 10px; text-decoration:none; color:#FFFFFF; background:inherit;}
+div#main div.nav ul.topnav li a:hover{ text-decoration:underline;}
+div#main div.nav h2.gallary{ background: rgb(0, 0, 0); width:25%; height:17px; display:block; float:right; font:bold 11px/14px Verdana, Arial, Helvetica, sans-serif; color:#CCCCCC;}
+div#main div#header { background: rgb(190, 190, 190); height: 80px;  display:block;}
+div#main div#header img{height:100%; float:right;}
 /*--------body-------------*/
 div#main div#body{ width:778px; background:#EEEEEE; padding:0 0 13px 0;}
 div#body div.left{padding:31px 0 0 19px; float:left; width:372px;}
