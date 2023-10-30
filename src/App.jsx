@@ -6,7 +6,7 @@ export default function App() {
     <div id="main">
       <Header />
       <div id="body">
-        <div className="left"> <img src="images/welcome.gif" alt="" /><br />
+        <div className="left"> <h2>Welcome!</h2> <br />
           <p>This is <strong>Markov Rentals</strong>, a Car Rental website I have created using React.</p>
         </div>
         <form action="#" method="get" className="search">
