@@ -1,7 +1,7 @@
 /* CSS Document */
 
 body {
-	padding:0; margin:0; background:#fff;}
+	padding:0; margin:0; background:#9c9c9c;}
 	
 p, div, ul, li, img, h1, h2, h3 ,a {
 		padding:0; margin:0;
@@ -17,7 +17,7 @@ form, label, input {
 	ul{list-style:none;}
 
 /*-----------------------*/
-div#main{width:90%; margin:0 auto 0 auto;}
+div#main{width:90%; margin:0 auto 0 auto; background: rgb(255, 255, 255);}
 div#main div.top{height: 92px;}
 div#main div.top img.logo{float:left; width: 30%; height: 50px; margin:24px 34% 9px 1%;}
 div#main div.top ul.topcar{ width:25%; float:right; height:92px;}
