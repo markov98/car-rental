@@ -64,7 +64,5 @@ div#body p.footer{ font:11px/14px Tahoma, Arial, Helvetica, sans-serif; text-ali
 div#body p.footer a{ color:#060602; text-decoration:none; margin:0 10px 0 10px;}
 div#body p.footer a:hover{ text-decoration:underline;}
 /*-----------------*/
-div#main div.foot{ height:51px; width:778px; background:#697779; margin:0 auto 0 auto; text-align:center; color:#FFFFFF; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; padding:20px 0 0 0;}
-div#main div.foot a{ margin:5px 0 0 0; color:#FFFFFF; text-decoration:underline; background:inherit;}
-div#main div.foot a:hover{ text-decoration:none;}
+div#main div.foot{ height:51px; background:#697779; margin:0 auto 0 auto; text-align:center; color:#FFFFFF; font:11px/14px Tahoma, Arial, Helvetica, sans-serif; padding:20px 0 0 0;}
 
