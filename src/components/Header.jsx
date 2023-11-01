@@ -1,13 +1,17 @@
 export default function Header() {
+    const topCarImg = [
+        "images/img01.jpg",
+        "images/img02.jpg",
+        "images/img03.jpg",
+        "images/img04.jpg"
+    ]
+
     return (
         <>
             <div className="top">
                 <a href="#"><img src="images/logo.png" alt="" border="0" className="logo" /></a>
                 <ul className="topcar">
-                    <li><a href="#"><img src="images/img01.jpg" alt="" width="79" height="92" border="0" /></a></li>
-                    <li><a href="#"><img src="images/img02.jpg" alt="" border="0" /></a></li>
-                    <li><a href="#"><img src="images/img03.jpg" alt="" border="0" /></a></li>
-                    <li><a href="#"><img src="images/img04.jpg" alt="" border="0" /></a></li>
+                    {topCarImg.map(el => <li><img src={el} /></li>)}
                 </ul>
             </div>
             <div className="nav">
