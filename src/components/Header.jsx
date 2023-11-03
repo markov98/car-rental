@@ -11,7 +11,7 @@ export default function Header() {
             <div className="top">
                 <a href="#"><img src="images/logo.png" alt="" border="0" className="logo" /></a>
                 <ul className="topcar">
-                    {topCarImg.map(el => <li><img src={el} /></li>)}
+                    {topCarImg.map((el, index) => <li  key={index}><img src={el} /></li>)}
                 </ul>
             </div>
             <div className="nav">
