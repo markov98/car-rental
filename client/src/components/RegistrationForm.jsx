@@ -22,7 +22,7 @@ export default function RegistrationForm() {
     }
   
     return (
-      <div>
+      <>
         <h2>Registration Form</h2>
         <form onSubmit={handleSubmit}>
           <div>
@@ -62,6 +62,6 @@ export default function RegistrationForm() {
             <button type="submit">Register</button>
           </div>
         </form>
-      </div>
+      </>
     );
   }
