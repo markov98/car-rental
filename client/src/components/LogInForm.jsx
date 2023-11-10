@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function LoginForm() {
     const [formData, setFormData] = useState({
         username: '',
@@ -19,7 +21,7 @@ export default function LoginForm() {
     }
 
     return (
-        <div>
+        <>
             <h2>Login Form</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -48,6 +50,6 @@ export default function LoginForm() {
                     <button type="submit">Login</button>
                 </div>
             </form>
-        </div>
+        </>
     );
 }

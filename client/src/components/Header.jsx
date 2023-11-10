@@ -16,11 +16,9 @@ export default function Header() {
             </div>
             <div className="nav">
                 <ul className="topnav">
-                    <li><a href="#">Home</a> | </li>
-                    <li><a href="#">Customer Care</a> |</li>
-                    <li><a href="#">Faq </a> |</li>
-                    <li><a href="#">Reservations</a> |</li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/">Home</a> | </li>
+                    <li><a href="/login">Login</a> |</li>
+                    <li><a href="/register">Register</a> |</li>
                 </ul>
                 <h2 className="gallary">Choose a car from Gallery</h2>
             </div>
