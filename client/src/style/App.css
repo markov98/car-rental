@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #9c9c9c;
+}
+
+p,
+div,
+ul,
+li,
+img,
+h1,
+h2,
+h3,
+a {
+    padding: 0;
+    margin: 0;
+}
+
+.spacer {
+    clear: both;
+    line-height: 1px;
+    font-size: 1px;
+}
+
+form,
+label,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+div#main {
+    width: 90%;
+    margin: 0 auto 0 auto;
+    background: rgb(255, 255, 255);
+}
