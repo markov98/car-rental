@@ -43,7 +43,6 @@ export default function Home() {
             <h3 className="tech"><img src="images/our_tech.gif" alt="" width="165" height="16" /></h3>
             <div className="ads"> <a href="#"><img src="images/ads01.jpg" alt="" width="94" height="45" border="0" /></a><a href="#"><img src="images/ads02.jpg" alt="" border="0" /></a><a href="#"><img src="images/ads03.jpg" alt="" width="80" height="45" border="0" /></a><a href="#"><img src="images/ads04.jpg" alt="" border="0" /></a><a href="#"><img src="images/ads05.jpg" alt="" border="0" /></a><a href="#"><img src="images/ads06.jpg" alt="" width="101" height="45" border="0" /></a><a href="#"><img src="images/ads07.jpg" alt="" width="81" height="45" border="0" /></a><a href="#"><img src="images/ads08.jpg" alt="" width="81" height="45" border="0" /></a></div>
             <p className="brd"></p>
-
         </>
     )
 }

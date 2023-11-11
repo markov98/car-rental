@@ -1,20 +1,3 @@
-div#body p.footer {
-    font: 11px/14px Tahoma, Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 21px 0 10px 0;
-    color: #060602;
-}
-
-div#body p.footer a {
-    color: #060602;
-    text-decoration: none;
-    margin: 0 10px 0 10px;
-}
-
-div#body p.footer a:hover {
-    text-decoration: underline;
-}
-
 div#main div.foot {
     height: 51px;
     background: #697779;
