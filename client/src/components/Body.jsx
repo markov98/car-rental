@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "./Home";
 import LoginForm from './LogInForm';
 import RegistrationForm from './RegistrationForm';
+import '../style/Body.css';
 
 export default function Body() {
   return (
