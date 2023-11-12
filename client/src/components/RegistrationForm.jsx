@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { register } from "../services/userService";
 
 export default function RegistrationForm() {
     const [formData, setFormData] = useState({
@@ -15,10 +16,14 @@ export default function RegistrationForm() {
       });
     }
   
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
 
-      console.log('Form data submitted:', formData);
+      try {
+        console.log('Success! \n' + await register(formData));
+      } catch(err) {
+        console.log(err);
+      }
     }
   
     return (
