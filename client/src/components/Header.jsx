@@ -22,6 +22,7 @@ export default function Header() {
                     <li><Link to="/">Home</Link> | </li>
                     <li><Link to="/login">Login</Link> |</li>
                     <li><Link to="/register">Register</Link> |</li>
+                    <li><Link to="/add-car">Add Car</Link> |</li>
                 </ul>
                 <h2 className="gallary">Choose a car from Gallery</h2>
             </div>
