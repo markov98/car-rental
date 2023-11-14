@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "./Home";
 import LoginForm from './LogInForm';
 import RegistrationForm from './RegistrationForm';
-import AddCar from './AddCar';
+import AddCar from './cars/AddCar';
 import '../style/Body.css';
 
 export default function Body() {
