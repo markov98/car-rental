@@ -6,13 +6,12 @@ export default function CarList() {
 
     useEffect(() => {
         getAllCars()
-            .then(result => setCars(result))
-            .then(console.log(cars));
+            .then(result => setCars(Object.values(result)));
     }, []);
 
     return (
         <ul>
-            TODO: Make sure the car list works
+            {cars.map(car => <li key={car._id}>{car.make}</li>)}
         </ul>
     )
 }
