@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import '../style/Header.css';
+import './Header.css';
 
 export default function Header() {
     const topCarImg = [

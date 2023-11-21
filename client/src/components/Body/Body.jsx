@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from "./Home";
-import LoginForm from './LogInForm';
-import RegistrationForm from './RegistrationForm';
-import AddCar from './cars/AddCar';
-import '../style/Body.css';
+import Home from "../Home/Home";
+import LoginForm from '../LoginForm/LoginForm';
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+import AddCar from '../AddCar/AddCar';
+import './Body.css';
 
 export default function Body() {
   return (
