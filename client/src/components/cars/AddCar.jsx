@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { add } from '../../services/carService';
+import { addCar } from '../../services/carService';
 
 export default function AddCar() {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ export default function AddCar() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(await add(formData));
+      console.log(await addCar(formData));
     } catch (err) {
       console.log(err);
     }

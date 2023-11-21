@@ -1,6 +1,10 @@
 import request from "../libreries/request";
 const baseUrl = 'http://localhost:3030/jsonstore/cars';
 
-export const add = async (carData) => {
+export const getAllCars = async () => {
+    return await request.get(baseUrl);
+}
+
+export const addCar = async (carData) => {
     return await request.post(baseUrl, carData);
 }
