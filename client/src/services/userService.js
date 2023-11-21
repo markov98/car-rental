@@ -1,4 +1,4 @@
-import request from "../libreries/request";
+import request from "../libraries/request";
 const baseUrl = 'http://localhost:3030/jsonstore/users';
 
 export const register = async (userData) => {
