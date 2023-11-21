@@ -6,6 +6,7 @@ export default function AddCar() {
     make: '',
     model: '',
     year: '',
+    imgURL: '',
   });
 
   const handleInputChange = (e) => {
@@ -55,6 +56,16 @@ export default function AddCar() {
           type="text"
           name="year"
           value={formData.year}
+          onChange={handleInputChange}
+          required
+        />
+      </label>
+      <label>
+        Image URL:
+        <input
+          type="text"
+          name="imgURL"
+          value={formData.imgURL}
           onChange={handleInputChange}
           required
         />
