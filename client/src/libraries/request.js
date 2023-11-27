@@ -8,6 +8,12 @@ const buildOptions = (data) => {
         };
     }
 
+    const token = localStorage.getItem('accessToken');
+
+    if (token) {
+        options.headers = { ...options.headers, 'X-Authorization': token };
+    }
+
     return options;
 };
 
@@ -17,15 +23,19 @@ const request = async (method, url, data) => {
         method,
     });
 
-    const result = await response.json();
+    if (!response.ok) {
+        throw new Error((await response.json()).message);
+    }
 
-    return result;
+    if (response.status === 204) {
+        return {};
+    }
+
+    return response.json();
 };
 
-export default {
-    get: request.bind(null, 'GET'),
-    post: request.bind(null, 'POST'),
-    put: request.bind(null, 'PUT'),
-    remove: request.bind(null, 'DELETE'),
-    patch: request.bind(null, 'PATCH'),
-}
+export const get = request.bind(null, 'GET');
+export const post = request.bind(null, 'POST');
+export const put = request.bind(null, 'PUT');
+export const remove = request.bind(null, 'DELETE');
+export const patch = request.bind(null, 'PATCH');
