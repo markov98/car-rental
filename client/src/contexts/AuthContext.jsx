@@ -1,8 +1,9 @@
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { login, logout, register } from "../services/authService";
+import { login, logout, register } from "../services/userService";
 
-import usePersistedState from "../hooks/usePersistantState.";
+import usePersistedState from "../hooks/usePersistantState";
+import paths from "../paths";
 
 export const AuthContext = createContext();
 
@@ -17,7 +18,7 @@ export function AuthContextProvider({ children }) {
 
             setAuth(result);
 
-            navigate('/');
+            navigate(paths.home);
         } catch (err) {
             alert(err.message);
         }
