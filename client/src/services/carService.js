@@ -1,4 +1,4 @@
-import request from "../libraries/request";
+import * as request from "../libraries/request";
 const baseUrl = 'http://localhost:3030/data/cars';
 
 export const getAllCars = async () => {
