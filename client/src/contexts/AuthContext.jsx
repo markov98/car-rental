@@ -30,7 +30,8 @@ export function AuthContextProvider({ children }) {
                 throw new Error('Passwords do not match!')
             }
 
-            register(values.email, values.password);
+            const result = await register(values.email, values.password, values.username);
+            setAuth(result);
 
             navigate(paths.home);
         } catch (err) {

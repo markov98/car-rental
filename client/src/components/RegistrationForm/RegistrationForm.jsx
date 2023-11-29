@@ -1,72 +1,69 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { register } from "../../services/userService";
+import { AuthContext } from "../../contexts/AuthContext";
+import useForm from "../../hooks/useForm";
 
 export default function RegistrationForm() {
-    const [formData, setFormData] = useState({
-      username: '',
-      email: '',
-      password: '',
-    });
-  
-    const handleInputChange = (event) => {
-      const { name, value } = event.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-  
-    const handleSubmit = async (event) => {
-      event.preventDefault();
+  const { registerSubmitHandler } = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    'username': '',
+    'email': '',
+    'password': '',
+    'confirm-password': ''
+  })
 
-      try {
-        console.log('Success! \n' + await register(formData));
-      } catch(err) {
-        console.log(err);
-      }
-    }
-  
-    return (
-      <>
-        <h2>Registration Form</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div>
-            <button type="submit">Register</button>
-          </div>
-        </form>
-      </>
-    );
-  }
+  return (
+    <>
+      <h2>Registration Form</h2>
+      <form onSubmit={onSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={values['username']}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={values['email']}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={values['password']}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="confirm-password">Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            value={values['confirm-password']}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </>
+  );
+}
