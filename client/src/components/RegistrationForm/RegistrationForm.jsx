@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { register } from "../../services/userService";
+import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import useForm from "../../hooks/useForm";
 
