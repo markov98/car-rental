@@ -30,11 +30,12 @@ export default function Header() {
                     {isAuthenticated ?
                         <>
                             <li><Link to={paths.addCar}>Add Car</Link> |</li>
-                            <li><Link to={paths.carList}>Car List</Link></li>
+                            <li><Link to={paths.carList}>Car List</Link>|</li>
+                            <li><Link to={paths.logout}>Logout</Link></li>
                         </> :
                         <>
                             <li><Link to={paths.login}>Login</Link> |</li>
-                            <li><Link to={paths.register}>Register</Link> |</li>
+                            <li><Link to={paths.register}>Register</Link> </li>
                         </>
                     }
                 </ul>
