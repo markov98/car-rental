@@ -32,7 +32,7 @@ export function AuthContextProvider({ children }) {
 
             register(values.email, values.password);
 
-            navigate('/login');
+            navigate(paths.home);
         } catch (err) {
             alert(err.message);
         }
@@ -45,7 +45,7 @@ export function AuthContextProvider({ children }) {
             setAuth({});
             localStorage.clear('auth');
 
-            navigate('/');
+            navigate(paths.home);
         } catch (err) {
             alert(err);
         }
