@@ -6,7 +6,8 @@ export default function CarList() {
 
     useEffect(() => {
         getAllCars()
-            .then(result => setCars(Object.values(result)));
+            .then(result => setCars(Object.values(result)))
+            .catch(err => alert(err));
     }, []);
 
     return (
