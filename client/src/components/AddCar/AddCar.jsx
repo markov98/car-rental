@@ -1,41 +1,32 @@
-import { useState } from 'react';
+import useForm from '../../hooks/useForm';
 import { addCar } from '../../services/carService';
 
 export default function AddCar() {
-  const [formData, setFormData] = useState({
+  const { values, onChange, onSubmit } = useForm(addCarSubmitHndler, {
     make: '',
     model: '',
     year: '',
-    imgURL: '',
-    price: '',
-  });
+    imgUrl: '',
+    price: ''
+  })
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  async function addCarSubmitHndler() {
     try {
-      console.log(await addCar(formData));
+      console.log(await addCar(values));
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <label>
         Make:
         <input
           type="text"
           name="make"
-          value={formData.make}
-          onChange={handleInputChange}
+          value={values.make}
+          onChange={onChange}
           required
         />
       </label>
@@ -45,8 +36,8 @@ export default function AddCar() {
         <input
           type="text"
           name="model"
-          value={formData.model}
-          onChange={handleInputChange}
+          value={values.model}
+          onChange={onChange}
           required
         />
       </label>
@@ -54,10 +45,10 @@ export default function AddCar() {
       <label>
         Year:
         <input
-          type="text"
+          type="number"
           name="year"
-          value={formData.year}
-          onChange={handleInputChange}
+          value={values.year}
+          onChange={onChange}
           required
         />
       </label>
@@ -67,19 +58,19 @@ export default function AddCar() {
         <input
           type="text"
           name="imgURL"
-          value={formData.imgURL}
-          onChange={handleInputChange}
+          value={values.imgURL}
+          onChange={onChange}
           required
         />
       </label>
       <br />
       <label>
-        Price/Hour:
+        $/Hour:
         <input
-          type="text"
+          type="number"
           name="price"
-          value={formData.price}
-          onChange={handleInputChange}
+          value={values.price}
+          onChange={onChange}
           required
         />
       </label>
