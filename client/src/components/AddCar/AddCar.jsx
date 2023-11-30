@@ -61,6 +61,7 @@ export default function AddCar() {
           required
         />
       </label>
+      <br />
       <label>
         Image URL:
         <input
@@ -71,6 +72,7 @@ export default function AddCar() {
           required
         />
       </label>
+      <br />
       <label>
         Price/Hour:
         <input
