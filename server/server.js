@@ -1342,7 +1342,7 @@
     	cars: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "BMW",
+    			make: "BMW",
                 model: 'M3',
                 year: '2020',
     			imgUrl: "https://commons.wikimedia.org/wiki/File:BMW_M3_Competition_(G80)_IMG_4041.jpg",
@@ -1351,7 +1351,7 @@
     		},
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Ford",
+    			make: "Ford",
                 model: 'Mustang',
                 year: '2022',
                 imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/1920px-2018_Ford_Mustang_GT_5.0.jpg',
