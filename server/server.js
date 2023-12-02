@@ -1345,7 +1345,7 @@
     			make: "BMW",
                 model: 'M3',
                 year: '2020',
-    			imgUrl: "https://commons.wikimedia.org/wiki/File:BMW_M3_Competition_(G80)_IMG_4041.jpg",
+    			imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/BMW_M3_Competition_%28G80%29_IMG_4041.jpg',
                 price: '25',
     			_createdOn: 1613551279012
     		},
