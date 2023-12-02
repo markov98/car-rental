@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './CarListItem.css';
 
 export default function CarListItem(props) {
     const { _id, imgUrl, make, price } = props.car;
