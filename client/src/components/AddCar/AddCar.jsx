@@ -1,5 +1,7 @@
 import useForm from '../../hooks/useForm';
+import { useNavigate } from "react-router-dom";
 import { addCar } from '../../services/carService';
+import paths from '../../paths';
 import '../Form.css';
 
 export default function AddCar() {
@@ -11,9 +13,12 @@ export default function AddCar() {
     price: ''
   })
 
+  const navigate = useNavigate()
+
   async function addCarSubmitHndler() {
     try {
-      console.log(await addCar(values));
+      await addCar(values);
+      navigate(paths.carList)
     } catch (err) {
       alert(err);
     }
@@ -59,8 +64,8 @@ export default function AddCar() {
         Image URL:
         <input
           type="text"
-          name="imgURL"
-          value={values.imgURL}
+          name="imgUrl"
+          value={values.imgUrl}
           onChange={onChange}
           required
         />

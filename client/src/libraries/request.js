@@ -2,6 +2,7 @@ const buildOptions = (data) => {
     const options = {};
 
     if (data) {
+        data._renterId = '';
         options.body = JSON.stringify(data);
         options.headers = {
             'content-type': 'application/json'
