@@ -9,6 +9,7 @@ import AddCar from '../AddCar/AddCar';
 import CarList from '../CarList/CarList';
 import Logout from '../Logout/Logout';
 import ErrorBoundary from '../ErrorBoundary';
+import CarDetails from '../CarDetails/CarDetails';
 
 import './Body.css';
 
@@ -23,6 +24,7 @@ export default function Body() {
           <Route path={paths.logout} element={<Logout />} />
           <Route path={paths.addCar} element={<AddCar />} />
           <Route path={paths.carList} element={<CarList />} />
+          <Route path={paths.carDetails} element={<CarDetails />} />
         </Routes>
       </ErrorBoundary>
     </div>
