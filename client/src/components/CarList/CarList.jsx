@@ -14,7 +14,8 @@ export default function CarList() {
 
     return (
         <div className="car-list">
-            {cars.map(car => <CarListItem key={car._id} car={car} />)}
+            {cars.length !== 0 ? cars.map(car => <CarListItem key={car._id} car={car} />) :
+            <h2>No cars in database</h2>}
         </div>
     )
 }
