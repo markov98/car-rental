@@ -4,5 +4,6 @@ export default {
     register: '/register',
     logout: '/logout',
     addCar: '/add-car',
-    carList: '/car-list'
+    carList: '/car-list',
+    carDetails: '/cars/:carId/details'
 }
