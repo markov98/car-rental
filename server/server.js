@@ -1347,7 +1347,7 @@
                 year: '2020',
     			imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/BMW_M3_Competition_%28G80%29_IMG_4041.jpg',
                 price: '25',
-                _renterId: null,
+                _renterId: '',
     			_createdOn: 1613551279012
     		},
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
@@ -1357,7 +1357,7 @@
                 year: '2022',
                 imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/1920px-2018_Ford_Mustang_GT_5.0.jpg',
                 price: '23',
-                _renterId: null,
+                _renterId: '',
     			_createdOn: 1613551344360
     		}
     	}

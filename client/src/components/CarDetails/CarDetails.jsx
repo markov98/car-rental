@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getOneCar } from "../../services/carService";
+import paths from "../../paths";
 
 export default function CarDetails() {
     const [car, setCar] = useState({});
     const { carId } = useParams();
+    const navigate = useNavigate()
 
     useEffect(() => {
         getOneCar(carId)
             .then(result => setCar(result))
-            .catch(err => alert('Car not found'));
+            .catch(err => {
+                alert('Car not found');
+                navigate(paths.carList);
+            });
     }, [])
 
     return (
