@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import './CarListItem.css';
 
 export default function CarListItem(props) {
     const { _id, imgUrl, make, price } = props.car;
@@ -10,7 +9,7 @@ export default function CarListItem(props) {
             <div className="car-details">
                 <h3 className="car-make">{make}</h3>
                 <p className="car-price">{`$${price}/Hour`}</p>
-                <Link to={`/cars/${_id}/details`}>Details</Link>
+                <Link className='details-link' to={`/cars/${_id}/details`}>Details</Link>
             </div>
         </div>
     );

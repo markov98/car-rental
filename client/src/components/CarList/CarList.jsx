@@ -1,6 +1,7 @@
 import { getAllCars } from "../../services/carService";
 import { useEffect, useState } from 'react';
 import CarListItem from "./CarListItem";
+import './CarList.css';
 
 export default function CarList() {
     const [cars, setCars] = useState([]);
@@ -12,8 +13,8 @@ export default function CarList() {
     }, []);
 
     return (
-        <ul>
+        <div className="car-list">
             {cars.map(car => <CarListItem key={car._id} car={car} />)}
-        </ul>
+        </div>
     )
 }
