@@ -5,8 +5,8 @@ export default function CarListItem(props) {
 
     return (
         <div className="car-list-item">
-            <img src={imgUrl} alt={`${make} car`} className="car-image" />
-            <div className="car-details">
+            <img src={imgUrl} alt={`${make} car`} className="car-image-mini" />
+            <div className="car-details-mini">
                 <h3 className="car-make">{make}</h3>
                 <p className="car-price">{`$${price}/Hour`}</p>
                 <Link className='details-link' to={`/cars/${_id}/details`}>Details</Link>

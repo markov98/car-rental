@@ -12,13 +12,13 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.car-image {
+.car-image-mini {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
 
-.car-details {
+.car-details-mini {
   text-align: center;
 }
 

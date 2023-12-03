@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getOneCar } from "../../services/carService";
 import paths from "../../paths";
+import './CarDetails.css';
 
 export default function CarDetails() {
     const [car, setCar] = useState({});
