@@ -1,5 +1,6 @@
 import useForm from '../../hooks/useForm';
 import { addCar } from '../../services/carService';
+import '../Form.css';
 
 export default function AddCar() {
   const { values, onChange, onSubmit } = useForm(addCarSubmitHndler, {
@@ -18,7 +19,8 @@ export default function AddCar() {
     }
   };
 
-  return (
+  return (<>
+    <h2>Add Car</h2>
     <form onSubmit={onSubmit}>
       <label>
         Make:
@@ -77,5 +79,6 @@ export default function AddCar() {
       <br />
       <button type="submit">Add Car</button>
     </form>
+  </>
   );
 };
