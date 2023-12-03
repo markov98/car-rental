@@ -1341,21 +1341,23 @@
     var seedData = {
     	cars: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
     			make: "BMW",
                 model: 'M3',
                 year: '2020',
     			imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/BMW_M3_Competition_%28G80%29_IMG_4041.jpg',
                 price: '25',
+                _renterId: null,
     			_createdOn: 1613551279012
     		},
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
     			make: "Ford",
                 model: 'Mustang',
                 year: '2022',
                 imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/1920px-2018_Ford_Mustang_GT_5.0.jpg',
                 price: '23',
+                _renterId: null,
     			_createdOn: 1613551344360
     		}
     	}
