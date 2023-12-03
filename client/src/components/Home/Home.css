@@ -7,6 +7,7 @@ div#body div.left {
 div#body div.left h2 {
     color: rgb(0, 105, 0);
     font: bold 22px/23px Tahoma, Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 
 div#body div.left p {
