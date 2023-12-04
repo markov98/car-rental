@@ -6,3 +6,5 @@ export const getAllCars = async () => await request.get(baseUrl);
 export const getOneCar = async (carId) => await request.get(`${baseUrl}/${carId}`);
 
 export const addCar = async (carData) => await request.post(baseUrl, carData);
+
+export const deleteCar = async (carId) => await request.deleteCar(baseUrl, carId);
