@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <>
             <div className="top">
-                <Link to="/"><img src="images/logo.png" alt="" border="0" className="logo" /></Link>
+                <Link to="/"><img src="/images/logo.png" alt="" border="0" className="logo" /></Link>
                 <ul className="topcar">
                     {topCarImg.map((el, index) => <li key={index}><img src={el} /></li>)}
                 </ul>
@@ -41,7 +41,7 @@ export default function Header() {
                 </ul>
                 <h2 className="hello">Hello, {isAuthenticated ? <>{username}</> : <>guest</>}!</h2>
             </div>
-            <div id="header"><img src='images/car.png' /></div>
+            <div id="header"><img src='/images/car.png' /></div>
         </>
     )
 } 
