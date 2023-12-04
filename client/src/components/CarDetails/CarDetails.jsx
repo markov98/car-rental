@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getOneCar } from "../../services/carService";
+import { deleteCar, getOneCar } from "../../services/carService";
 import paths from "../../paths";
 import './CarDetails.css';
 
@@ -18,6 +18,15 @@ export default function CarDetails() {
             });
     }, [])
 
+    async function deleteHandler() {
+        try {
+            await deleteCar(carId);
+            navigate(paths.carList);
+        } catch (err) {
+            alert(err);
+        }
+    }
+
     return (
         <div className="car-details">
             <img src={car.imgUrl} alt={`${car.make} ${car.model}`} className="car-image" />
@@ -29,7 +38,7 @@ export default function CarDetails() {
             <div className="car-links">
                 <Link to={`#`} className="rent-link">Rent</Link>
                 <Link to={`#`} className="edit-link">Edit</Link>
-                <Link to={`#`} className="delete-link">Delete</Link>
+                <Link  className="delete-link" onClick={deleteHandler}>Delete</Link>
             </div>
         </div>
     );
