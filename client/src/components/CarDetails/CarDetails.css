@@ -6,6 +6,9 @@
 .car-image {
     width: 45%;
     height: 30%;
+    margin: 2px;
+    border: #333;
+    border-radius: 8px;
     object-fit: cover;
 
 }
