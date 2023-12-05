@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { deleteCar, getOneCar } from "../../services/carService";
+import { AuthContext } from "../../contexts/AuthContext";
 import paths from "../../paths";
 import './CarDetails.css';
 
@@ -8,6 +9,7 @@ export default function CarDetails() {
     const [car, setCar] = useState({});
     const { carId } = useParams();
     const navigate = useNavigate()
+    const { isAuthenticated, userId } = useContext(AuthContext);
 
     useEffect(() => {
         getOneCar(carId)
@@ -31,14 +33,24 @@ export default function CarDetails() {
         <div className="car-details">
             <img src={car.imgUrl} alt={`${car.make} ${car.model}`} className="car-image" />
             <div className="car-info">
-                <h2>{car.make} {car.model}</h2>
+                <h2>{`${car.make} ${car.model}`}</h2>
                 <p>Year: {car.year}</p>
                 <p>Price: ${car.price}/Hour</p>
+                <p>Status: {car._renterId === '' ? <>Free</> : <>Rented</>}</p>
             </div>
             <div className="car-links">
-                <Link to={`#`} className="rent-link">Rent</Link>
-                <Link to={`#`} className="edit-link">Edit</Link>
-                <Link  className="delete-link" onClick={deleteHandler}>Delete</Link>
+                {isAuthenticated && (
+                    <>
+                        {userId === car._ownerId && (
+                            <>
+                                <Link className="delete-link" onClick={deleteHandler}>Delete</Link>
+                                <Link to={`#`} className="edit-link">Edit</Link>
+                            </>
+                        )}
+                        {car._renterId === '' && userId !== car._ownerId && <Link to={`#`} className="rent-link">Rent</Link>}
+                        {car._renterId === userId && <Link to={`#`} className="return-link">Return</Link>}
+                    </>
+                )}
             </div>
         </div>
     );
