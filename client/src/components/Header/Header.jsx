@@ -27,10 +27,10 @@ export default function Header() {
             <div className="nav">
                 <ul className="topnav">
                     <li><Link to={paths.home}>Home</Link> | </li>
+                    <li><Link to={paths.carList}>Car List</Link>|</li>
                     {isAuthenticated ?
                         <>
-                            <li><Link to={paths.addCar}>Add Car</Link> |</li>
-                            <li><Link to={paths.carList}>Car List</Link>|</li>
+                            <li><Link to={paths.addCar}>Add Car</Link> |</li>    
                             <li><Link to={paths.logout}>Logout</Link></li>
                         </> :
                         <>
