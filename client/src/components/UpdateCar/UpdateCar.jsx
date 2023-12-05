@@ -41,7 +41,7 @@ export default function UpdateCar() {
 
     return (
         <>
-            <h2>Add Car</h2>
+            <h2>Edit Car</h2>
             <form onSubmit={onSubmit}>
                 <label>
                     Make:
