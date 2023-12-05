@@ -11,6 +11,7 @@ import Logout from '../Logout/Logout';
 import ErrorBoundary from '../ErrorBoundary';
 import CarDetails from '../CarDetails/CarDetails';
 import UpdateCar from '../UpdateCar/UpdateCar';
+import AuthGuard from '../AuthGuard/AuthGuard';
 
 import './Body.css';
 
@@ -22,11 +23,13 @@ export default function Body() {
           <Route path={paths.home} element={<Home />} />
           <Route path={paths.login} element={<LoginForm />} />
           <Route path={paths.register} element={<RegistrationForm />} />
-          <Route path={paths.logout} element={<Logout />} />
-          <Route path={paths.addCar} element={<AddCar />} />
           <Route path={paths.carList} element={<CarList />} />
           <Route path={paths.carDetails} element={<CarDetails />} />
-          <Route path={paths.updateCar} element={<UpdateCar />} />
+          <Route element={<AuthGuard />}>
+            <Route path={paths.logout} element={<Logout />} />
+            <Route path={paths.addCar} element={<AddCar />} />
+            <Route path={paths.updateCar} element={<UpdateCar />} />
+          </Route>
         </Routes>
       </ErrorBoundary>
     </div>
