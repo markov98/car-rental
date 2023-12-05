@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { deleteCar, getOneCar } from "../../services/carService";
+import { deleteCar, getOneCar, rentCar } from "../../services/carService";
 import { AuthContext } from "../../contexts/AuthContext";
 import paths from "../../paths";
 import './CarDetails.css';
@@ -29,6 +29,14 @@ export default function CarDetails() {
         }
     }
 
+    async function rentHandler() {
+        try {
+            await rentCar(carId, userId);
+        } catch (err) {
+            alert(err);
+        }
+    }
+
     return (
         <div className="car-details">
             <img src={car.imgUrl} alt={`${car.make} ${car.model}`} className="car-image" />
@@ -44,10 +52,10 @@ export default function CarDetails() {
                         {userId === car._ownerId && (
                             <>
                                 <Link className="delete-link" onClick={deleteHandler}>Delete</Link>
-                                <Link to={`#`} className="edit-link">Edit</Link>
+                                <Link to={`/cars/${carId}/update`} className="edit-link">Edit</Link>
                             </>
                         )}
-                        {car._renterId === '' && userId !== car._ownerId && <Link to={`#`} className="rent-link">Rent</Link>}
+                        {car._renterId === '' && userId !== car._ownerId && <Link onClick={rentHandler} className="rent-link">Rent</Link>}
                         {car._renterId === userId && <Link to={`#`} className="return-link">Return</Link>}
                     </>
                 )}

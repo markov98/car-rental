@@ -5,5 +5,6 @@ export default {
     logout: '/logout',
     addCar: '/add-car',
     carList: '/car-list',
-    carDetails: '/cars/:carId/details'
+    carDetails: '/cars/:carId/details',
+    updateCar: '/cars/:carId/update'
 }

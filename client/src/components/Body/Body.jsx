@@ -10,6 +10,7 @@ import CarList from '../CarList/CarList';
 import Logout from '../Logout/Logout';
 import ErrorBoundary from '../ErrorBoundary';
 import CarDetails from '../CarDetails/CarDetails';
+import UpdateCar from '../UpdateCar/UpdateCar';
 
 import './Body.css';
 
@@ -25,6 +26,7 @@ export default function Body() {
           <Route path={paths.addCar} element={<AddCar />} />
           <Route path={paths.carList} element={<CarList />} />
           <Route path={paths.carDetails} element={<CarDetails />} />
+          <Route path={paths.updateCar} element={<UpdateCar />} />
         </Routes>
       </ErrorBoundary>
     </div>
