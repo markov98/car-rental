@@ -12,6 +12,4 @@ export const addCar = async (carData) => {
 
 export const deleteCar = async (carId) => await request.remove(`${baseUrl}/${carId}`);
 
-export const rentCar = async (carId, userId) => await request.patch(`${baseUrl}/${carId}`, {_renterId: userId});
-
 export const updateCar = async (carId, carData) => await request.put(`${baseUrl}/${carId}`, carData);
