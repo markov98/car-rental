@@ -36,7 +36,7 @@
     align-items: end;
 }
 
-.rent-link,
+.upvote-link,
 .edit-link,
 .delete-link {
     display: block;
@@ -51,7 +51,7 @@
     transition: background-color 0.3s ease;
 }
 
-.rent-link:hover,
+.upvote-link:hover,
 .edit-link:hover,
 .delete-link:hover {
     background-color: darkgreen;

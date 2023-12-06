@@ -1358,7 +1358,8 @@
                 price: '23',
     			_createdOn: 1613551344360
     		}
-    	}
+    	},
+        upvotes: {}
     };
     var rules$1 = {
     	users: {
