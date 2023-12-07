@@ -9,20 +9,10 @@ import './Header.css';
 export default function Header() {
     const { isAuthenticated, username } = useContext(AuthContext)
 
-    const topCarImg = [
-        "images/img01.jpg",
-        "images/img02.jpg",
-        "images/img03.jpg",
-        "images/img04.jpg"
-    ]
-
     return (
         <>
             <div className="top">
                 <Link to="/"><img src="/images/logo.png" alt="" border="0" className="logo" /></Link>
-                <ul className="topcar">
-                    {topCarImg.map((el, index) => <li key={index}><img src={el} /></li>)}
-                </ul>
             </div>
             <div className="nav">
                 <ul className="topnav">

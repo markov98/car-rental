@@ -9,18 +9,6 @@ div#main div.top img.logo {
     margin: 24px 34% 9px 1%;
 }
 
-div#main div.top ul.topcar {
-    width: 25%;
-    float: right;
-    height: 92px;
-}
-
-div#main div.top ul.topcar li {
-    float: right;
-    line-height: 0;
-    font-size: 0;
-}
-
 div#main div.nav {
     height: 17px;
 }
