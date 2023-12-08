@@ -5,7 +5,8 @@ div#body div.welcome {
 }
 
 .latest {
-    padding: 31px;
+    margin-top: 120px;
+    margin-left: 30px;
 }
 
 div#body div.welcome h2 {
