@@ -4,6 +4,10 @@ div#body div.welcome {
     width: 100%;
 }
 
+.latest {
+    padding: 31px;
+}
+
 div#body div.welcome h2 {
     color: rgb(0, 105, 0);
     font: bold 22px/23px Tahoma, Arial, Helvetica, sans-serif;

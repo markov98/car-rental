@@ -1,6 +1,6 @@
 import { getAllCars } from "../../services/carService";
 import { useEffect, useState } from 'react';
-import CarListItem from "./CarListItem";
+import CarListItem from "../CarListitem/CarListItem";
 import './CarList.css';
 
 export default function CarList() {

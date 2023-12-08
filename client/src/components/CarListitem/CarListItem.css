@@ -1,0 +1,35 @@
+.car-list-item {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .car-image-mini {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .car-details-mini {
+    text-align: center;
+  }
+  
+  .car-make {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .car-price {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: green;
+  }
+  
+  .details-link {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+  }

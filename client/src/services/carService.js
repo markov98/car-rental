@@ -5,13 +5,9 @@ export const getAllCars = async () => await request.get(baseUrl);
 
 
 export const getLatestCars = async () => {
-    const query = new URLSearchParams({
-        sortBy: `_createdOn desc`,
-        offset: 0,
-        pageSize: 3,
-    });
-
-    return await request.get(`${baseUrl}?${query}`);
+    const result = await request.get(`${baseUrl}`);
+    const sorted = result.sort((a, b) => b._createdOn - a._createdOn);
+    return sorted.slice(0, 3);
 }
 
 export const getOneCar = async (carId) => await request.get(`${baseUrl}/${carId}`);
