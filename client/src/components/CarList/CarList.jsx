@@ -5,6 +5,15 @@ import './CarList.css';
 
 export default function CarList() {
     const [cars, setCars] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('')
+
+    function onChange(e) {
+        setSearchTerm(e.target.value);
+    }
+
+    async function onClick() {
+        
+    }
 
     useEffect(() => {
         getAllCars()
@@ -15,8 +24,8 @@ export default function CarList() {
     return (
         <>
             <div className="search-bar">
-                <input />
-                <button>Search</button>
+                <input name="search-tearm" value={searchTerm} onChange={onChange}/>
+                <button onClick={onClick}>Search</button>
             </div>
             <div className="car-list">
                 {cars.length !== 0 ? cars.map(car => <CarListItem key={car._id} car={car} />) :
