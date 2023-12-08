@@ -3,6 +3,17 @@ const baseUrl = 'http://localhost:3030/data/cars';
 
 export const getAllCars = async () => await request.get(baseUrl);
 
+
+export const getLatestCars = async () => {
+    const query = new URLSearchParams({
+        sortBy: `_createdOn desc`,
+        offset: 0,
+        pageSize: 3,
+    });
+
+    return await request.get(`${baseUrl}?${query}`);
+}
+
 export const getOneCar = async (carId) => await request.get(`${baseUrl}/${carId}`);
 
 export const addCar = async (carData) => {
