@@ -10,7 +10,7 @@ export default function Home() {
         getLatestCars()
             .then(result => setCars(result))
             .catch(err => alert(err));
-    })
+    }, [])
 
     return (
         <>

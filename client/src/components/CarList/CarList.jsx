@@ -1,4 +1,4 @@
-import { getAllCars } from "../../services/carService";
+import { getAllCars, searchCars } from "../../services/carService";
 import { useEffect, useState } from 'react';
 import CarListItem from "../CarListitem/CarListItem";
 import './CarList.css';
@@ -12,7 +12,9 @@ export default function CarList() {
     }
 
     async function onClick() {
-        
+        searchCars(searchTerm)
+            .then(result => setCars(result))
+            .catch(err => alert(err));
     }
 
     useEffect(() => {
@@ -24,7 +26,7 @@ export default function CarList() {
     return (
         <>
             <div className="search-bar">
-                <input name="search-tearm" value={searchTerm} onChange={onChange}/>
+                <input name="search-tearm" value={searchTerm} onChange={onChange} />
                 <button onClick={onClick}>Search</button>
             </div>
             <div className="car-list">
