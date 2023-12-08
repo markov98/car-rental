@@ -13,9 +13,15 @@ export default function CarList() {
     }, []);
 
     return (
-        <div className="car-list">
-            {cars.length !== 0 ? cars.map(car => <CarListItem key={car._id} car={car} />) :
-            <h2>No cars</h2>}
-        </div>
+        <>
+            <div className="search-bar">
+                <input />
+                <button>Search</button>
+            </div>
+            <div className="car-list">
+                {cars.length !== 0 ? cars.map(car => <CarListItem key={car._id} car={car} />) :
+                    <h2>No cars</h2>}
+            </div>
+        </>
     )
 }
