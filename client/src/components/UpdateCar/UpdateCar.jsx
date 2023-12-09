@@ -98,7 +98,7 @@ export default function UpdateCar() {
                     />
                 </label>
                 <br />
-                <button type="submit">Add Car</button>
+                <button type="submit">Edit Car</button>
             </form>
         </>
     )
