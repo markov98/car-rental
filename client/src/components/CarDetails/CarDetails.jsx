@@ -26,7 +26,7 @@ export default function CarDetails() {
         getUpvotes(carId)
             .then(result => setUpvotes(result))
             .catch(err => alert(err));
-    })
+    }, []);
 
     async function deleteHandler() {
         try {
@@ -40,6 +40,7 @@ export default function CarDetails() {
     async function upvoteHandler() {
         try {
             await upvote(carId);
+            setUpvotes(await getUpvotes(carId));
         } catch (err) {
             alert(err);
         }
