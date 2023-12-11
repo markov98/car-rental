@@ -39,8 +39,12 @@ export default function CarDetails() {
 
     async function upvoteHandler() {
         try {
-            await upvote(carId);
-            setUpvotes(await getUpvotes(carId));
+            const newUpvote = await upvote(carId);
+
+            setUpvotes([
+                ...upvotes,
+                newUpvote
+            ]);
         } catch (err) {
             alert(err);
         }
