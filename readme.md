@@ -9,5 +9,5 @@ Server template provided by SoftUni: https://github.com/softuni-practice-server/
 App deployed at https://car-rental-8b08e.web.app/
 
 ## Installation
-After downloading the repository, navigate to the client folder and type **npm install**. Launch with **npm run dev**. Alternatively, you can go to the deployment at https://car-rental-8b08e.web.app/.
+Requires NodeJS to be installed on your PC. After downloading the repository, navigate to the client folder and type **npm install**. Launch with **npm run dev**. Alternatively, you can go to the deployment at https://car-rental-8b08e.web.app/.
 The server must be started with **node server.js** 
